@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.8.34309.116
+# Visual Studio Version 18
+VisualStudioVersion = 18.10.12224.181 stable
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiLsTokenServer.Grpc.Api", "MultiLsTokenServer.Grpc.Api\MultiLsTokenServer.Grpc.Api.csproj", "{0B2F80E9-8FDD-4B46-BB24-3B4D35096C23}"
 EndProject
@@ -14,6 +14,20 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiLsTokenServer.Infrastructure", "MultiLsTokenServer.Infrastructure\MultiLsTokenServer.Infrastructure.csproj", "{AF76D3E5-DCA5-4F90-AFAB-7E6D3680A77C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiLsTokenServer.Web.Api", "MultiLsTokenServer.Web.Api\MultiLsTokenServer.Web.Api.csproj", "{879A7E86-7B9E-438A-AD32-283EDB8945EA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "STSDocumentation", "STSDocumentation", "{A473DE87-BE3B-4188-8870-7A1D1CF3E3F3}"
+	ProjectSection(SolutionItems) = preProject
+		STSDocumentation\IEC 62055-41.pdf = STSDocumentation\IEC 62055-41.pdf
+		STSDocumentation\STS 201-2 Ed1.2 - STS interface classes for DLMS_COSEM.pdf = STSDocumentation\STS 201-2 Ed1.2 - STS interface classes for DLMS_COSEM.pdf
+		STSDocumentation\STS 531-0 Edition 1.9.6 2023.pdf = STSDocumentation\STS 531-0 Edition 1.9.6 2023.pdf
+		STSDocumentation\STS 531-10-04 Edition 1.9.6 2023.pdf = STSDocumentation\STS 531-10-04 Edition 1.9.6 2023.pdf
+		STSDocumentation\STS 531-2-1 Edition 1.9.6 2023.pdf = STSDocumentation\STS 531-2-1 Edition 1.9.6 2023.pdf
+		STSDocumentation\STS 531-3 Edition 1.9.6 2023.pdf = STSDocumentation\STS 531-3 Edition 1.9.6 2023.pdf
+		STSDocumentation\STS101-2 Edition1.6.pdf = STSDocumentation\STS101-2 Edition1.6.pdf
+		STSDocumentation\STS202-5 Edition1.1 April 2022.pdf = STSDocumentation\STS202-5 Edition1.1 April 2022.pdf
+		STSDocumentation\STS600-4-2 Ed1.3 2021.pdf = STSDocumentation\STS600-4-2 Ed1.3 2021.pdf
+		STSDocumentation\STS600-8-6 Edition1.6 2022.pdf = STSDocumentation\STS600-8-6 Edition1.6 2022.pdf
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

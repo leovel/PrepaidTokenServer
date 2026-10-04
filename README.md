@@ -1,6 +1,6 @@
 # MultiLsTokenServer
 
-MultiLsTokenServer is a .NET 10 service for communicating with a security module (HSM) and exposing prepaid-token operations over HTTP and gRPC. The server builds HSM commands, validates and formats request data, sends commands to the configured HSM over TCP, and returns structured operation results.
+MultiLsTokenServer is a .NET 10 service for communicating with a security module (HSM) and exposing prepaid-token operations (for Energy, Water, Gas and Time) over HTTP and gRPC. The server builds HSM commands, validates and formats request data, sends commands to the configured HSM over TCP, and returns structured operation results.
 
 The solution contains both an HTTP API and a gRPC API. The gRPC host provides the broader set of operations; the HTTP host currently exposes diagnostics and electricity vending.
 

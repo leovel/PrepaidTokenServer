@@ -1,0 +1,57 @@
+syntax = "proto3";
+
+option csharp_namespace = "MultiLsTokenServer.Grpc.Api";
+
+import "Protos/common.proto";
+
+service DiagnosticApi {
+  rpc CheckSecurityModule (EmptyRequest) returns (CheckSecurityModuleResponse);
+  rpc GetIdentification (EmptyRequest) returns (GetIdentificationResponse);
+  rpc QueryIdentification (EmptyRequest) returns (QueryIdentificationResponse);
+  rpc QueryDate (EmptyRequest) returns (QueryDateResponse);
+}
+
+message EmptyRequest {
+}
+
+message CheckSecurityModulePayload {
+  bool connected = 1;
+}
+
+message GetIdentificationPayload {
+  string module_identifier = 1;
+  string firmware_identifier = 2;
+}
+
+message QueryIdentificationPayload {
+  string public_key_identifier = 1;
+  string hardware_identifier = 2;
+  string firmware_identifier = 3;
+  string firmware_hash = 4;
+}
+
+message QueryDatePayload {
+  Common.HsmDateTime rtc_time = 1;
+  fixed32 window_size = 2;
+}
+
+message CheckSecurityModuleResponse {
+  Common.ApiResponseHeader header = 1;
+  CheckSecurityModulePayload status = 2;
+}
+
+message GetIdentificationResponse {
+  Common.ApiResponseHeader header = 1;
+  GetIdentificationPayload identification = 2;
+}
+
+message QueryIdentificationResponse {
+  Common.ApiResponseHeader header = 1;
+  QueryIdentificationPayload query_identification = 2;
+}
+
+message QueryDateResponse {
+  Common.ApiResponseHeader header = 1;
+  QueryDatePayload query_date = 2;
+}
+

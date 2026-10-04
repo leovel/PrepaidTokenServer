@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+option csharp_namespace = "MultiLsTokenServer.Grpc.Api";
+
+package Common;
+
+message HsmDateTime {
+  fixed32 year = 1;
+  fixed32 month = 2;
+  fixed32 day = 3;
+  fixed32 hour = 4;
+  fixed32 minute = 5;
+  fixed32 second = 6;
+}
+
+message ApiResponseHeader {
+  string code = 1;
+  string identifier = 2;
+  string description = 3;
+  bool is_error = 4;
+}
+
+message TokenResponse {
+  ApiResponseHeader header = 1;
+  string token = 2;
+}
+
+message TransferCreditTokenRequest {
+  fixed32 key_register = 1;
+  string decoder_reference_number = 2;
+  fixed32 tariff_index = 3;
+  fixed32 encryption_algorithm = 4;
+  fixed32 token_carrier_type = 5;
+  double transfer_ammount = 6;
+  HsmDateTime issue_date_time = 7;
+}

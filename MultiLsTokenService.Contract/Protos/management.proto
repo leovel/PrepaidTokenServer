@@ -1,0 +1,80 @@
+syntax = "proto3";
+
+option csharp_namespace = "MultiLsTokenServer.Grpc.Api";
+
+import "Protos/common.proto";
+
+service ManagementApi {
+  rpc GenerateSetMaximumPowerLimitToken (ManagementTokenRequest) returns (Common.TokenResponse);
+  rpc GenerateClearCreditToken (ManagementTokenRequest) returns (Common.TokenResponse);
+  rpc GenerateSetTariffRateToken (ManagementTokenRequest) returns (Common.TokenResponse);
+  rpc GenerateClearTamperConditionToken (NoAmmountManagementTokenRequest) returns (Common.TokenResponse);
+  rpc GenerateSetMaximumPhasePowerUnbalanceLimitToken (ManagementTokenRequest) returns (Common.TokenResponse);
+  rpc GenerateSetWaterMeterFactorToken (ManagementTokenRequest) returns (Common.TokenResponse);
+  rpc GenerateKeyChangeToken (KeyChangeTokenRequest) returns (KeyChangeTokenResponse);
+  rpc VerifyToken (VerifyTokenRequest) returns (VerifyTokenResponse);
+}
+
+message ManagementTokenRequest {
+  fixed32 key_register = 1;
+  string decoder_reference_number = 2;
+  fixed32 tariff_index = 3;
+  fixed32 encryption_algorithm = 4;
+  fixed32 token_carrier_type = 5;
+  double transfer_ammount = 6;
+  Common.HsmDateTime issue_date_time = 7;
+}
+
+message NoAmmountManagementTokenRequest {
+  fixed32 key_register = 1;
+  string decoder_reference_number = 2;
+  fixed32 tariff_index = 3;
+  fixed32 encryption_algorithm = 4;
+  fixed32 token_carrier_type = 5;
+  Common.HsmDateTime issue_date_time = 6;
+}
+
+message KeyChangeTokenRequest {
+  fixed32 key_register_old = 1;
+  fixed32 key_register_new = 2;
+  string decoder_reference_number = 3;
+  fixed32 tariff_index_old = 4;
+  fixed32 encryption_algorithm = 5;
+  fixed32 token_carrier_type = 6;
+  fixed32 tariff_index_new = 7;
+  fixed32 num_tokens = 8;
+}
+
+message VerifyTokenRequest {
+  fixed32 key_register = 1;
+  string decoder_reference_number = 2;
+  fixed32 tariff_index = 3;
+  fixed32 encryption_algorithm = 4;
+  string token_dec = 5;
+}
+
+message KeyChangeTokenPayload {
+  fixed32 count = 1;
+  string token_01 = 2;
+  string token_02 = 3;
+  string token_03 = 4;
+  string token_04 = 5;
+}
+
+message VerifyTokenPayload {
+  bool valid = 1;
+  fixed32 token_class = 2;
+  fixed32 sub_class = 3;
+  double transfer_ammount = 4;
+  Common.HsmDateTime issue_date_time = 5;
+}
+
+message KeyChangeTokenResponse {
+  Common.ApiResponseHeader header = 1;
+  KeyChangeTokenPayload key_change_sequence = 2;
+}
+
+message VerifyTokenResponse {
+  Common.ApiResponseHeader header = 1;
+  VerifyTokenPayload token_verification = 2;
+}

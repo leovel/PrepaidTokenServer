@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+option csharp_namespace = "MultiLsTokenServer.Grpc.Api";
+
+import "Protos/common.proto";
+
+service TestOrDisplayApi {
+  rpc GenerateMeterTestOrDisplayControFieldToken (TestOrDisplayRequest) returns (TestOrDisplayResponse);
+}
+
+message TestOrDisplayRequest {
+  string decoder_reference_number = 1;
+  fixed32 test_number = 2;
+}
+
+message TestOrDisplayPayload {
+  string action = 1;
+  string token = 2;
+}
+
+message TestOrDisplayResponse {
+  Common.ApiResponseHeader header = 1;
+  TestOrDisplayPayload test_or_display = 2;
+}

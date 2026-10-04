@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  multilstokenserver.web.api:
+    image: leovel/token-server
+    build:
+      context: .
+      dockerfile: MultiLsTokenServer.Web.Api/Dockerfile

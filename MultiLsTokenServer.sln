@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34309.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiLsTokenServer.Grpc.Api", "MultiLsTokenServer.Grpc.Api\MultiLsTokenServer.Grpc.Api.csproj", "{0B2F80E9-8FDD-4B46-BB24-3B4D35096C23}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiLsTokenService.Contract", "MultiLsTokenService.Contract\MultiLsTokenService.Contract.csproj", "{99F698C1-EB8A-4B50-A3CD-2CCD3CD82FD5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiLsTokenServer.Domain", "MultiLsTokenServer.Domain\MultiLsTokenServer.Domain.csproj", "{171C0863-2918-48CC-A7C2-541BADADD7A5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiLsTokenServer.Algorithms", "MultiLsTokenServer.Algorithms\MultiLsTokenServer.Algorithms.csproj", "{33B0A00E-7228-4059-9456-E2FD7A98B1FE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiLsTokenServer.Infrastructure", "MultiLsTokenServer.Infrastructure\MultiLsTokenServer.Infrastructure.csproj", "{AF76D3E5-DCA5-4F90-AFAB-7E6D3680A77C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiLsTokenServer.Web.Api", "MultiLsTokenServer.Web.Api\MultiLsTokenServer.Web.Api.csproj", "{879A7E86-7B9E-438A-AD32-283EDB8945EA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0B2F80E9-8FDD-4B46-BB24-3B4D35096C23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B2F80E9-8FDD-4B46-BB24-3B4D35096C23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B2F80E9-8FDD-4B46-BB24-3B4D35096C23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B2F80E9-8FDD-4B46-BB24-3B4D35096C23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99F698C1-EB8A-4B50-A3CD-2CCD3CD82FD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99F698C1-EB8A-4B50-A3CD-2CCD3CD82FD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99F698C1-EB8A-4B50-A3CD-2CCD3CD82FD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99F698C1-EB8A-4B50-A3CD-2CCD3CD82FD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{171C0863-2918-48CC-A7C2-541BADADD7A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{171C0863-2918-48CC-A7C2-541BADADD7A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{171C0863-2918-48CC-A7C2-541BADADD7A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{171C0863-2918-48CC-A7C2-541BADADD7A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33B0A00E-7228-4059-9456-E2FD7A98B1FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33B0A00E-7228-4059-9456-E2FD7A98B1FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33B0A00E-7228-4059-9456-E2FD7A98B1FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33B0A00E-7228-4059-9456-E2FD7A98B1FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF76D3E5-DCA5-4F90-AFAB-7E6D3680A77C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF76D3E5-DCA5-4F90-AFAB-7E6D3680A77C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF76D3E5-DCA5-4F90-AFAB-7E6D3680A77C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF76D3E5-DCA5-4F90-AFAB-7E6D3680A77C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{879A7E86-7B9E-438A-AD32-283EDB8945EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{879A7E86-7B9E-438A-AD32-283EDB8945EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{879A7E86-7B9E-438A-AD32-283EDB8945EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{879A7E86-7B9E-438A-AD32-283EDB8945EA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {79B13C4A-C3DD-4D36-81E9-D9B8AA0F1242}
+	EndGlobalSection
+EndGlobal

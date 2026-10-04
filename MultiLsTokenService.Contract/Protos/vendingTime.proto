@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "MultiLsTokenServer.Grpc.Api";
+
+import "Protos/common.proto";
+
+service VendingTimeApi {
+  rpc GenerateTransferCreditToken (Common.TransferCreditTokenRequest) returns (Common.TokenResponse);
+  rpc GenerateTransferCurrencyToken (Common.TransferCreditTokenRequest) returns (Common.TokenResponse);
+}
+
